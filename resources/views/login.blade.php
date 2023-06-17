@@ -29,7 +29,7 @@
                                 class="form-control"
                                 id="password"
                                 name="password"
-                                placeholder="name@example.com"
+                                placeholder="Password"
                             />
                         </div>
                         <button class="btn btn-login">Login</button>
