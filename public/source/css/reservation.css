@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans&family=Plus+Jakarta+Sans:wght@500&family=Unbounded:wght@700&display=swap");
+
+#reservation {
+    padding-left: 1.5rem;
+}
+
+#reservation .row {
+    padding-top: 3rem;
+    padding-right: 3rem;
+}
+
+#reservation h4 {
+    font-family: "Unbounded", cursive;
+}
+
+#reservation .btn-validasi {
+    padding-top: 0;
+    padding-right: 0;
+}
+
+#reservation .col {
+    padding: 0;
+}
+
+#reservation .status-paid {
+    background-color: #f0ffe5;
+    color: #2ad000;
+    border: 1px solid #2ad000;
+    border-radius: 10px;
+}
+
+#reservation .status-unpaid {
+    background-color: #fff0e5;
+    color: #eb6200;
+    border: 1px solid #eb6200;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+}
+
+#reservation button {
+    border: none;
+    background-color: transparent;
+}

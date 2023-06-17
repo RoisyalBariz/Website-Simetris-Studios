@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Plus+Jakarta+Sans:wght@500&family=Unbounded&display=swap");
+
+#footer {
+    background-color: #191a34;
+}
+
+#footer .logo-footer {
+    width: 100%;
+}
+
+#footer h6 {
+    color: white;
+    font-family: "Unbounded", cursive;
+}
+
+#footer a {
+    color: #9c9ba4;
+    font-family: "Noto Sans", sans-serif;
+    text-decoration: none;
+}
+
+#footer .bi {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.copyright {
+    background-color: #191a34;
+    text-align: center;
+}
+
+.copyright p {
+    color: #9c9ba4;
+}
+
+@media (max-width: 768px) {
+    #footer .ms-auto {
+        text-align: end;
+    }
+}
+
+@media (max-width: 426px) {
+    #footer .col-lg-3 {
+        padding-top: 1rem;
+    }
+    #footer .col-sm-12 {
+        width: 100%;
+        text-align: center;
+    }
+}

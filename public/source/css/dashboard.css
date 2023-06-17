@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans&family=Plus+Jakarta+Sans:wght@500&family=Unbounded:wght@700&display=swap");
+
+#dashboard {
+    overflow-x: hidden;
+}
+
+#dashboard .col-10 {
+    padding-left: 0;
+    margin-left: -1.6rem;
+}
+
+#sidebar {
+    margin: 0;
+    padding: 3rem 0;
+    width: 220px;
+    background-color: #ad8b73;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    background-color: #191a34;
+}
+
+#sidebar ul {
+    margin-top: 3rem;
+}
+
+#sidebar li {
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+#sidebar a {
+    display: block;
+    color: #8c8c99;
+    text-decoration: none;
+    font-family: "Unbounded", cursive;
+}
+
+#sidebar .home {
+    width: 20%;
+    margin-bottom: 0.3rem;
+}
+
+#sidebar .reservation {
+    width: 20%;
+    margin-left: -0.1rem;
+    margin-bottom: 0.3rem;
+}
+
+#sidebar .income {
+    width: 17%;
+    margin-left: 0.1rem;
+    margin-right: 0.2rem;
+}
+
+#sidebar .active {
+    color: white;
+    background-color: transparent;
+    font-family: "Unbounded", cursive;
+    width: max-content;
+}
+
+#navbar {
+    height: 10vh;
+    width: 82rem;
+    padding-right: 7rem;
+    background-color: transparent;
+    /* margin-left: 13rem; */
+}
+
+#navbar h3 {
+    font-family: "Unbounded", cursive;
+}
+
+#navbar .page {
+    margin-right: 2rem;
+    font-family: "Noto Sans", sans-serif;
+}
+
+#navbar .btn-login {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0;
+    font-family: "Unbounded", cursive;
+    width: 100%;
+}
+
+#isi {
+    padding-left: 1.5rem;
+}
+
+#isi .card {
+    width: 15%;
+    text-align: center;
+    margin-right: 1rem;
+    background-color: #edeae9;
+    border: none;
+    border-radius: 0;
+    margin-top: 2rem;
+}
+
+#isi .card h2 {
+    font-family: "Unbounded", cursive;
+}
+
+#isi .card h6 {
+    font-family: "Noto Sans", sans-serif;
+}
+
+#isi #section2 {
+    margin-top: 3rem;
+    padding-right: 5rem;
+}
+
+#isi #section2 h4 {
+    font-family: "Unbounded", cursive;
+}
+
+#isi #section2 .btn-print {
+    background-color: #191a34;
+    color: white;
+    border-radius: 0;
+    font-family: "Unbounded", cursive;
+    width: 100%;
+    padding: 0.5rem 2rem;
+}
+
+#isi #section2 table {
+    width: 100%;
+}
+
+#isi #section2 .status {
+    background-color: #f0ffe5;
+    color: #2ad000;
+    border: 1px solid #2ad000;
+    border-radius: 10px;
+}

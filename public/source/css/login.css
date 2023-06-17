@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans&family=Plus+Jakarta+Sans:wght@500&family=Unbounded:wght@700&display=swap");
+
+#login #kiri {
+    padding: 0;
+}
+
+#login #kiri img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100vh;
+}
+
+#login #kanan {
+    background-image: url(/source/img/bg-section-3-homepage.png);
+    background-size: contain;
+    padding: 5rem 4rem;
+}
+
+#login .card {
+    background-color: #fffcf9;
+    margin-top: 10rem;
+}
+
+#login .card-body {
+    padding: 3rem;
+}
+
+#login .card h1 {
+    font-family: "Unbounded", cursive;
+    margin-bottom: 2rem;
+}
+
+#login .form-label {
+    font-family: "Unbounded", cursive;
+}
+
+#login .btn-login {
+    width: 100%;
+    background-color: #191a34;
+    color: white;
+    font-family: "Unbounded", cursive;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    #login #kanan {
+        padding: 5rem 2rem;
+    }
+
+    #login .card {
+        margin-top: 0;
+    }
+
+    #login .card-body {
+        padding: 1rem;
+    }
+}

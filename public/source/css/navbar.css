@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&family=Unbounded&display=swap");
+
+.navbar {
+    background-color: #fffcf9;
+}
+
+.navbar .logo {
+    width: 100%;
+    height: auto;
+}
+
+.navbar .nav-link {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin-left: 2rem;
+    font-weight: bold;
+}
+
+.navbar .btn-book-navbar {
+    font-family: "Unbounded", cursive;
+    background-color: #191a34;
+    color: white;
+    width: 9rem;
+    font-size: 0.8rem;
+}

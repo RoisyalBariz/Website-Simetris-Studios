@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans&family=Plus+Jakarta+Sans:wght@500&family=Unbounded&display=swap");
+
+#booking {
+    background-image: url(/source/img/bg-section-3-homepage.png);
+    background-size: cover;
+    padding: 3rem 10rem;
+    text-align: center;
+}
+
+#booking h1 {
+    font-family: "Unbounded", cursive;
+    font-weight: bold;
+}
+
+#booking p {
+    font-family: "Inter", sans-serif;
+}
+
+#booking #pricelist .modal-dialog {
+    min-width: 700px;
+}
+
+#booking #pricelist .modal-content {
+    padding: 1rem;
+}
+
+#booking #pricelist .modal-header {
+    padding: 0;
+    border-bottom: none;
+}
+
+#booking #pricelist h1 {
+    font-family: "Unbounded", cursive;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+}
+
+#booking #pricelist h5 {
+    font-family: "Unbounded", cursive;
+    font-weight: bolder;
+}
+
+#booking #pricelist .kiri {
+    text-align: start;
+    font-family: "Noto Sans", sans-serif;
+}
+
+#booking #pricelist .kanan {
+    text-align: end;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+}
+
+#booking .btn-price {
+    color: white;
+    background-color: #191a34;
+    font-family: "Unbounded", cursive;
+}
+
+#booking .card {
+    width: 80%;
+    margin-top: 2rem;
+    text-align: start;
+}
+
+#booking .form-label {
+    font-family: "Unbounded", cursive;
+    font-weight: bolder;
+}
+
+#booking .form-check {
+    padding-left: 0;
+}
+
+#booking label input {
+    visibility: hidden;
+    position: absolute;
+}
+
+#booking label img {
+    width: 10rem;
+    height: 100%;
+}
+
+#booking label input + img {
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+#booking label input:checked + img {
+    border: 3px solid #ffc107;
+}
+
+#booking .btn-book {
+    width: 100%;
+    background-color: #191a34;
+    color: white;
+    border-radius: 0;
+    font-family: "Unbounded", cursive;
+    padding: 0.5rem 0;
+}
+
+#booking #book .modal-dialog {
+    width: 100%;
+    min-width: 700px;
+}
+
+#booking #book .modal-content {
+    border-radius: 0;
+    padding: 1rem;
+}
+
+#booking #book h2 {
+    font-family: "Unbounded", cursive;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#booking #book h6 {
+    font-family: "Unbounded", cursive;
+    font-weight: bolder;
+}
+
+#booking #book .kiri {
+    font-family: "Noto Sans", sans-serif;
+}
+
+#booking #book .kanan {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bolder;
+    text-align: end;
+}
+
+#booking #book .hl {
+    border: 1px solid;
+    width: 95%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#booking #book .btn-resi {
+    color: white;
+    background-color: #191a34;
+    width: 100%;
+    font-family: "Unbounded", cursive;
+    font-weight: bolder;
+    border-radius: 0;
+    margin-top: 1rem;
+}
+
+@media (max-width: 1024px) {
+    #booking {
+        padding: 3rem 8rem;
+    }
+
+    #booking .card {
+        width: 100%;
+    }
+
+    #booking label img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #booking {
+        padding: 3rem 5rem;
+    }
+}
+
+@media (max-width: 426px) {
+    #booking {
+        padding: 2rem 2rem;
+        background-size: contain;
+    }
+
+    #booking #pricelist .modal-dialog {
+        min-width: 60%;
+    }
+
+    #booking .col-md-3 {
+        width: 50%;
+    }
+
+    #booking #book .modal-dialog {
+        width: auto;
+        min-width: auto;
+    }
+
+    #booking #book .modal-body {
+        padding: 0.45rem;
+    }
+
+    #booking #book .hl {
+        width: 100%;
+    }
+}
