@@ -19,22 +19,6 @@ Route::get('/', function () {
     return view('homepage');
 });
 
-// Route::get('/booking', function () {
-//     return view('booking');
-// });
-
-// Route::get('/login', function () {
-//     return view('login');
-// });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// });
-
-// Route::get('/reservation', function () {
-//     return view('reservation');
-// });
-
 Route::get('/income', function () {
     return view('income');
 });
