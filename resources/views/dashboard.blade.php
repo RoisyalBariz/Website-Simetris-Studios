@@ -15,7 +15,7 @@
                         src="{{ 'source/img/receipt_long_card.svg' }}"
                         alt=""
                     />
-                    <h2>6</h2>
+                    <h2>0</h2>
                     <h6>Reservation Today</h6>
                 </div>
             </div>

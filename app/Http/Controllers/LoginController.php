@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+// Menampilkan Tampilan Login
 class LoginController extends Controller
 {
     public function index()
@@ -12,6 +13,7 @@ class LoginController extends Controller
         return view('login');
     }
 
+    // Cek Validasi Login
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
@@ -30,6 +32,7 @@ class LoginController extends Controller
         return back()->with('loginError', 'Login Failed');
     }
 
+    // Fungsi logout bawaan laravel
     public function logout()
     {
         Auth::logout();
