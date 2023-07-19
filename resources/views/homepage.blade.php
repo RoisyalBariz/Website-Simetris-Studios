@@ -175,62 +175,22 @@
     </div>
     <div class="highlight"></div>
     <div class="row justify-content-center">
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-                <img
-                    src="{{ 'source/img/MANGFEB.jpg' }}"
-                    class="card-img"
-                    alt="..."
-                />
-                <div class="card-img-overlay">
-                    <div class="card-body">
-                        <h5 class="card-title">Mangfeb</h5>
+        @foreach($artists as $artist)
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <img
+                        src="{{ $artist->image }}"
+                        class="card-img"
+                        alt="..."
+                    />
+                    <div class="card-img-overlay">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$artist->name}}</h5>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-                <img
-                    src="{{ 'source/img/ARIS.jpg' }}"
-                    class="card-img"
-                    alt="..."
-                />
-                <div class="card-img-overlay">
-                    <div class="card-body">
-                        <h5 class="card-title">Aris</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-                <img
-                    src="{{ 'source/img/ANDES.jpg' }}"
-                    class="card-img"
-                    alt="..."
-                />
-                <div class="card-img-overlay">
-                    <div class="card-body">
-                        <h5 class="card-title">Andes</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-                <img
-                    src="{{ 'source/img/ALLAN.jpg' }}"
-                    class="card-img"
-                    alt="..."
-                />
-                <div class="card-img-overlay">
-                    <div class="card-body">
-                        <h5 class="card-title">Alan</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach        
     </div>
 </div>
 {{-- Section 4 --}}

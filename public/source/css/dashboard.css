@@ -136,3 +136,16 @@
     border: 1px solid #2ad000;
     border-radius: 10px;
 }
+
+.btn-book {
+    width: 100%;
+    background-color: #191a34 !important;
+    color: white;
+    border-radius: 0;
+    font-family: "Unbounded", cursive;
+    padding: 0.5rem 0;
+}
+
+.btn-book:hover {
+    color: white;
+}

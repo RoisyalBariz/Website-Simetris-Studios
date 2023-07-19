@@ -98,6 +98,47 @@ class BookingController extends Controller
         ]);
     }
 
+    // Menghasilkan tampilan halaman hair artist di dashboard
+    public function hairartist()
+    {
+        return view('hair-artist', [
+            'hairArtists' => HairArtist::all()
+        ]);
+    }
+
+    // Menampilkan halaman edit hair artist
+    public function hairartistEdit($id)
+    {
+        $artist = HairArtist::where("id", $id)->first();
+        return view('hair-artist-edit', [
+            'hairArtist' => $artist
+        ]);
+    }
+
+    // Digunakan untuk mengupdate data hair artist
+    public function hairartistUpdate(Request $request, $id)
+    {
+        $hairArtist = HairArtist::where("id", $id)->first();
+        $request->validate([
+            'name' => 'required',
+        ]);
+
+        if ($request->hasFile('picture')) {
+            $image = $request->file('picture');
+            $timestamp = time();
+            $filename = $timestamp . '_' . $image->getClientOriginalName();
+            $image->storeAs('public/images', $filename);
+            $imagePaths = $filename;
+
+            $hairArtist->image = $imagePaths;
+        }
+
+        $hairArtist->name = $request->input("name");
+        $hairArtist->image = $request->input("image");
+        $hairArtist->update();
+        return redirect()->route('hair-artist')->with('success', 'Hair Artist berhasil diupdate');
+    }
+
     // Menghasilkan Tampilan Dashboard
     public function dashboard()
     {

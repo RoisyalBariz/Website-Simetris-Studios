@@ -29,9 +29,9 @@
         />
 
         {{-- Style CSS --}}
-        <link rel="stylesheet" href="{{ 'source/css/dashboard.css' }}" />
-        <link rel="stylesheet" href="{{ 'source/css/reservation.css' }}" />
-        <link rel="stylesheet" href="{{ 'source/css/income.css' }}" />
+        <link rel="stylesheet" href="{{ asset('source/css/dashboard.css') }}" />
+        <link rel="stylesheet" href="{{ asset('source/css/reservation.css') }}" />
+        <link rel="stylesheet" href="{{ asset('source/css/income.css') }}" />
     </head>
 
     <body>
@@ -43,7 +43,7 @@
                             <li>
                                 <a href="/dashboard">
                                     <img
-                                        src="{{ 'source/img/home.svg' }}"
+                                        src="{{ asset('source/img/home.svg') }}"
                                         alt=""
                                         class="home"
                                     />
@@ -54,7 +54,7 @@
                                 <a href="/reservation">
                                     <img
                                         src="{{
-                                            'source/img/receipt_long.svg'
+                                            asset('source/img/receipt_long.svg')
                                         }}"
                                         alt=""
                                         class="reservation"
@@ -65,11 +65,21 @@
                             <li>
                                 <a href="/income">
                                     <img
-                                        src="{{ 'source/img/income.svg' }}"
+                                        src="{{ asset('source/img/income.svg') }}"
                                         alt=""
                                         class="income"
                                     />
                                     Income
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/hair-artist">
+                                    <img
+                                        src="{{ asset('source/img/user.svg') }}"
+                                        alt=""
+                                        class="income"
+                                    />
+                                    Hair Artist
                                 </a>
                             </li>
                         </ul>

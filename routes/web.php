@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Menampilkan Halaman Homepage
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', [PageController::class, 'home'])->name('home');
 
 // Menampilkan Halaman Income
 Route::get('/income', function () {
@@ -36,7 +35,10 @@ Route::post('/booking', [BookingController::class, 'store']); // saat user mengi
 
 //admin
 Route::get('/reservation', [BookingController::class, 'reservation'])->middleware('auth'); // saat admin mengakses URL '/reservation', Laravel akan memeriksa apakah pengguna telah terotentikasi. Jika pengguna belum terotentikasi, Laravel akan mengarahkan pengguna ke halaman login. Jika pengguna telah terotentikasi, Laravel akan memanggil method 'reservation' dalam BookingController untuk menampilkan halaman reservasi atau melakukan operasi lain yang terkait dengan fitur reservasi.
-Route::get('/dashboard', [BookingController::class, 'dashboard'])->middleware('auth'); // saat admin mengakses URL '/dashboard', Laravel akan memeriksa apakah pengguna telah terotentikasi. Jika pengguna belum terotentikasi, Laravel akan mengarahkan pengguna ke halaman login. Jika pengguna telah terotentikasi, Laravel akan memanggil method 'dashboard' dalam BookingController untuk menampilkan halaman dashboard atau melakukan operasi lain yang terkait dengan fitur dashboard.
+Route::get('/hair-artist', [BookingController::class, 'hairartist'])->middleware('auth')->name(""); // saat admin mengakses URL '/hair-artist', Laravel akan memeriksa apakah pengguna telah terotentikasi. Jika pengguna belum terotentikasi, Laravel akan mengarahkan pengguna ke halaman login. Jika pengguna telah terotentikasi, Laravel akan memanggil method 'hair artist' dalam BookingController untuk menampilkan halaman reservasi atau melakukan operasi lain yang terkait dengan fitur reservasi.
+Route::get('/hair-artist/{id}', [BookingController::class, 'hairartistEdit'])->middleware('auth')->name("edit-artist"); // digunakan untuk masuk ke dalam halaman edit hair artist berdasarkan BookingController
+Route::post('/hair-artist/{id}', [BookingController::class, 'hairartistUpdate'])->middleware('auth')->name("update-artist"); // digunakan untk mengupdate hair artist berdasarkan id
+Route::get('/dashboard', [BookingController::class, 'dashboard'])->middleware('auth')->name("dashboard"); // saat admin mengakses URL '/dashboard', Laravel akan memeriksa apakah pengguna telah terotentikasi. Jika pengguna belum terotentikasi, Laravel akan mengarahkan pengguna ke halaman login. Jika pengguna telah terotentikasi, Laravel akan memanggil method 'dashboard' dalam BookingController untuk menampilkan halaman dashboard atau melakukan operasi lain yang terkait dengan fitur dashboard.
 Route::delete('/deleteBooking/{booking:id}', [BookingController::class, 'destroy'])->middleware('auth'); // saat admin melakukan permintaan DELETE ke URL '/deleteBooking/{booking:id}', Laravel akan memeriksa apakah pengguna telah terotentikasi. Jika pengguna belum terotentikasi, Laravel akan mengarahkan pengguna ke halaman login. Jika pengguna telah terotentikasi, Laravel akan memanggil method 'destroy' dalam BookingController untuk menangani logika penghapusan data booking sesuai dengan id yang diberikan.
 Route::put('/reservation/{booking:id}', [BookingController::class, 'sudah_bayar'])->middleware('auth'); // saat admin melakukan permintaan PUT ke URL '/reservation/{booking:id}', Laravel akan memeriksa apakah pengguna telah terotentikasi. Jika pengguna belum terotentikasi, Laravel akan mengarahkan pengguna ke halaman login. Jika pengguna telah terotentikasi, Laravel akan memanggil method 'sudah_bayar' dalam BookingController untuk menangani logika yang terkait dengan penandaan bahwa booking tersebut sudah dibayar.
 Route::get('/income', [BookingController::class, 'income'])->middleware('auth'); //  saat admin mengakses URL '/income', Laravel akan memeriksa apakah pengguna telah terotentikasi. Jika pengguna belum terotentikasi, Laravel akan mengarahkan pengguna ke halaman login. Jika pengguna telah terotentikasi, Laravel akan memanggil method 'income' dalam BookingController untuk menampilkan informasi tentang pendapatan (income) yang terkait dengan aplikasi
