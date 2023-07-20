@@ -58,8 +58,8 @@
 }
 
 #booking .card {
-    width: 80%;
-    margin-top: 2rem;
+    /* width: 80%; */
+    /* margin-top: 2rem; */
     text-align: start;
 }
 
@@ -149,6 +149,33 @@
     margin-top: 1rem;
 }
 
+.card-img-overlay {
+    position: absolute;
+    display: flex;
+    align-items: end;
+}
+
+.card-title {
+    font-family: "Unbounded", cursive;
+    font-weight: bolder;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    margin-bottom: 0;
+    margin-left: -8px;
+    border-left-style: solid;
+    border-left-color: #ffa910;
+    border-left-width: 0.4rem;
+    /* background-color: white; */
+    color: black;
+}
+
+.card-img-overlay .card-body {
+    background-color: white;
+}
+
+.card-body{
+    padding: 8px;
+}
 @media (max-width: 1024px) {
     #booking {
         padding: 3rem 8rem;

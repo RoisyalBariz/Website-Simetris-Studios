@@ -68,13 +68,13 @@
 
         <div class="card mx-auto">
             <div class="card-body">
-                <form action="/booking" method="post" enctype="multipart/form-data" >
+                <form action="/booking" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="mb-3">
                         <label for="fullname" class="form-label">Fullname</label>
                         <input name="fullname" type="text" class="form-control" id="fullname"
-                            placeholder="Fill with your full name" required / >
+                            placeholder="Fill with your full name" required />
                     </div>
                     <div class="mb-3">
                         <label for="whatsapp" class="form-label">Whatsapp Number</label>
@@ -101,14 +101,14 @@
                         </select>
                         <div class="mb-3 mt-3">
                             <label for="reservation-date" class="form-label">Reservation Date</label>
-                            <input name="tanggal_reservasi" type="date" class="form-control calendar" id="reservation-date"
-                                onfocus="(this.type='date')" onblur="(this.type='text')"
+                            <input name="tanggal_reservasi" type="date" class="form-control calendar"
+                                id="reservation-date" onfocus="(this.type='date')" onblur="(this.type='text')"
                                 placeholder="dd-mm-yyyy" required />
-                                @error('tanggal_reservasi')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
+                            @error('tanggal_reservasi')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label for="reservation-hour" class="form-label">Reservation Hour</label>
@@ -119,16 +119,20 @@
                         <div class="mb-3">
                             <label for="hair-artist" class="form-label">Choose Hair Artist</label>
 
-                            <div class="row">
+                            <div class="d-flex justify-content-between flex-column flex-lg-row gap-2">
                                 @foreach ($hairartists as $hairartist)
-                                    <div class="col-lg-3 col-md-3">
-                                        <label class="form-check-label" for="{{ $hairartist->name }}">
+                                    <label class="form-check-label" for="{{ $hairartist->name }}">
+                                        <div class="card position-relative">
                                             <input class="form-check-input" type="radio" name="hair_artist"
                                                 id="{{ $hairartist->name }}" value="{{ $hairartist->name }}" required />
-                                            <img src="{{ asset('source/img') }}/{{ $hairartist->image }}"
-                                                alt="" />
-                                        </label>
-                                    </div>
+                                            <img src="{{ $hairartist->image }}" class="card-img" alt="..." />
+                                            <div class="card-img-overlay">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ $hairartist->name }}</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
                                 @endforeach
                             </div>
                         </div>
